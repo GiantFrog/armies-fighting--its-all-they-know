@@ -1,0 +1,18 @@
+[package]
+name = "armies-fighting-its-all-they-know"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bevy = "0.13.0"
+leafwing-input-manager = "0.13.3"
+rand = "0.8.5"
+
+# Enable max optimizations for dependencies, but not for our code. Disable if debug steps are weird.
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+lto = "thin"
