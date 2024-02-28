@@ -7,8 +7,14 @@ edition = "2021"
 
 [dependencies]
 bevy = "0.13.0"
+bevy_ecs_tilemap = "0.12"
+bevy_ecs_ldtk = "0.9"
 leafwing-input-manager = "0.13.3"
 rand = "0.8.5"
+
+[patch.crates-io]
+bevy_ecs_tilemap = { git = "https://github.com/rparrett/bevy_ecs_tilemap", branch = "bevy13" }
+bevy_ecs_ldtk = { git = "https://github.com/theshortcut/bevy_ecs_ldtk", branch = "bevy-0.13" }
 
 # Enable max optimizations for dependencies, but not for our code. Disable if debug steps are weird.
 [profile.dev.package."*"]
